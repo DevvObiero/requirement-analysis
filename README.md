@@ -73,7 +73,7 @@ The diagram below outlines the primary actors and their interactions with the bo
 
 
 <p align="center">
-    <img src="alx-booking-uc.png" alt="UML Use Case Diagram for ALX Booking Management System" style="width:100%; max-width:700px;">
+    <img src="./alx-booking-uc.png.png" alt="UML Use Case Diagram for ALX Booking Management System" style="width:100%; max-width:700px;">
 </p>
 
 ## Acceptance Criteria
