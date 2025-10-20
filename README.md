@@ -56,3 +56,47 @@ Software requirements are broadly categorized into two main types: Functional an
 * **Security:** All user passwords and payment information SHALL be encrypted using **AES-256** both in transit and at rest.
 * **Usability:** The system's user interface SHALL be **responsive** and fully accessible on major mobile and desktop browsers (Chrome, Firefox, Safari, Edge).
 * **Availability:** The booking system SHALL maintain a guaranteed uptime of **99.9%** (excluding scheduled maintenance).
+## Use Case Diagrams
+
+**Use Case Diagrams** are a type of behavioral diagram in the Unified Modeling Language (UML) used to describe the functional requirements of a system in terms of **actors** and **use cases**. They illustrate *who* (the actor) interacts with the system and *what* they can do (the use case).
+
+**Benefits:**
+
+* They provide a high-level, easily understandable view of the system's functionalities for stakeholders.
+* They help establish the boundary of the system, defining what is inside and what is outside.
+* They serve as the foundation for writing detailed use case specifications, which further elaborate on the steps and flow of events for each interaction.
+
+### Booking Management System Use Case Diagram
+
+The diagram below outlines the primary actors and their interactions with the booking management system:
+
+
+
+<p align="center">
+    <img src="alx-booking-uc.png" alt="UML Use Case Diagram for ALX Booking Management System" style="width:100%; max-width:700px;">
+</p>
+
+## Acceptance Criteria
+
+**Acceptance Criteria (AC)** are conditions that a software product or feature must satisfy to be accepted by a user, customer, or key stakeholder. They define the boundaries of a user story and are used to verify that the system is working correctly and meeting its intended purpose from the user's perspective.
+
+**Importance:**
+
+* **Clear Definition of "Done":** AC provides a clear, objective checklist for developers and testers to determine when a feature is complete.
+* **Reduces Ambiguity:** They specify the expected outcome, leaving no room for subjective interpretation of a requirement.
+* **Basis for Testing:** AC forms the basis for writing User Acceptance Testing (UAT) and System Integration Testing (SIT) test cases.
+* **Ensures Quality:** By focusing on the user's success conditions, AC helps ensure the delivered feature is high-quality and directly solves the user's problem.
+
+### Example Acceptance Criteria for the Checkout Feature
+
+**Feature:** Secure Checkout and Booking Confirmation
+
+**Goal:** Allow the user to finalize their booking, submit payment, and receive a confirmation.
+
+**Acceptance Criteria:**
+
+1.  **GIVEN** the user has a service selected in their booking cart, **WHEN** they click "Proceed to Checkout," **THEN** they SHALL be directed to a secure payment page.
+2.  **GIVEN** the user is on the payment page, **WHEN** they successfully enter valid credit card details and submit the form, **THEN** the system SHALL successfully charge the correct total amount via the Payment Gateway.
+3.  **GIVEN** the payment is successful, **THEN** the booking status in the database SHALL be updated to "Confirmed," and the user SHALL be shown a "Booking Confirmed" page with a unique booking ID.
+4.  **GIVEN** the payment is successful, **THEN** an automated confirmation email containing all booking details (date, time, service, and total cost) SHALL be sent to the user's registered email address.
+5.  **GIVEN** the payment fails (e.g., card declined), **THEN** the user SHALL remain on the payment page and be presented with a clear, specific error message explaining the failure.
